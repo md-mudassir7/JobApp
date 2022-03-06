@@ -10,4 +10,4 @@ How to use the code
 3.Install the requirements\
 ->pip install -r requirements.txt\
 4.Start the server\
-->uvicorn main:app --reload\
+->uvicorn main:app --reload
