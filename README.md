@@ -1,4 +1,4 @@
-JoJob searching web application built using Python's FASTApi framework
+Job searching web application built using Python's FASTApi framework
 
 
 How to use the code
