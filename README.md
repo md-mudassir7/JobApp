@@ -19,3 +19,11 @@ pip install -r requirements.txt
 ```
 uvicorn main:app --reload
 ```
+5.Visit the localhost port 8000 
+```
+http://127.0.0.1:8000/
+```
+6.For the api documentation visit
+```
+http://127.0.0.1:8000/docs
+```
