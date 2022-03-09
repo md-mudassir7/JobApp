@@ -1,8 +1,24 @@
+<style>
+  .card-body:hover {
+    transform: translate3D(0,-1px,0) scale(1.15);
+  }
+  .card-body {
+    background-color:#d3d3f8;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
+  }
+
+  .card-body:hover {
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .4s ease; /* zoom in */
+  }
+</style>
+
 <div class="card" style="width: 18rem; color: black">
     <div class="card-body">
       <h5 class="card-title">{{obj.title}}</h5>
       <p class="card-text">Company : {{obj.company}}</p>
-      <p class="card-text">Company URL: {{obj.company_url}}</p>
+      <p class="card-text">Apply here: {{obj.company_url}}</p>
       <p class="card-text">Description: {{obj.description[:60]}}</p>
       <a href="/detail/{{obj.id}}" class="btn btn-primary">Read More</a>
     </div>

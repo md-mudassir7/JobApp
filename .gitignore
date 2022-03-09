@@ -7,3 +7,4 @@ test_db.db
 htmlcov
 .coverage
 .coveragerc
+.gitignore
