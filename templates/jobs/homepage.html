@@ -13,13 +13,6 @@
       <h1 class="display-4" style="color:maroon; font-family:Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;" >Find Jobs</h1>
     <br>
   <div class="row">
-    {% if jobs |count ==0 %}
-      <center>
-        <div>
-          <h2>No jobs to display <a href="/post-a-job/">Click here</a> to create one</h2>
-        </div>
-      </center>
-    {% else %}
       {% for job in jobs %}
         <div class="col-lg-4 col-md-3 col-sm-10 mr-auto">
           {% with obj=job %}
@@ -32,7 +25,6 @@
             </div></div><br><div class="row">
           {% endif %}
       {% endfor %}
-    {% endif %}
     </div>
 </div>
 
