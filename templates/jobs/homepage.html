@@ -1,27 +1,31 @@
 {% extends "shared/base.html" %} 
 
 {% block title %} 
-  <title>New Jobboard</title>
+  <title>Jobboard</title>
+  <link rel = "icon" href = 
+"{{ url_for('static',path='images/download.png') }}" 
+        type = "image/x-icon">
 {% endblock %} 
 
 {% block content %} 
+<br>
 <div class="container">
-      <h1 class="display-4 text-danger">Find Jobs...</h1>
-
+      <h1 class="display-4" style="color:maroon; font-family:Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;" >Find Jobs</h1>
+    <br>
   <div class="row">
-    {% for job in jobs %}
-      <div class="col-lg-4 col-md-3 col-sm-10 mr-auto">
-        {% with obj=job %}
-          {% include "components/card.html" %}
-        {% endwith %}
+      {% for job in jobs %}
+        <div class="col-lg-4 col-md-3 col-sm-10 mr-auto">
+          {% with obj=job %}
+            {% include "components/card.html" %}
+          {% endwith %}
 
-        {% if loop.index %3 %}
-          </div>
-        {% else %}
-          </div></div><br><div class="row">
-        {% endif %}
-    {% endfor %}
-  </div>
+          {% if loop.index %3 %}
+            </div>
+          {% else %}
+            </div></div><br><div class="row">
+          {% endif %}
+      {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

@@ -1,11 +1,10 @@
 __pycache__
 .env
 env/
-
-sql_app.db
+tests
 test_db.db
-
 .pytest_cache
 htmlcov
 .coverage
 .coveragerc
+.gitignore

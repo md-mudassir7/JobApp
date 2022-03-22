@@ -3,6 +3,9 @@
 
 {% block title %}
   <title>Delete Jobs</title>
+  <link rel = "icon" href = 
+"{{ url_for('static',path='images/download.png') }}" 
+        type = "image/x-icon">
 {% endblock %}
 
 {% block content %}
@@ -32,7 +35,7 @@
                 <th scope="row">{{loop.index}}</th>
                 <td>{{job.title}}</td>
                 <td>{{job.company}}</td>
-                <td>{{job.company}}</td>
+                <td> <a href="{{job.company_url}}">{{job.company_url}}</a> </td>
                 <td>{{job.location}}</td>
                 <td><button class="btn btn-danger btn-sm" onclick="delete_job({{job.id}})">Delete</button></td>
             </tr>

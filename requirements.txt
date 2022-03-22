@@ -12,3 +12,4 @@ python-jose
 python-multipart
 jinja2
 aiofiles
+gunicorn

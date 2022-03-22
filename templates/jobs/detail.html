@@ -2,11 +2,14 @@
 
 {% block title %} 
   <title>Job Detail</title>
+  <link rel = "icon" href = 
+"{{ url_for('static',path='images/download.png') }}" 
+        type = "image/x-icon">
 {% endblock %} 
 
 {% block content %} 
 <div class="container">
-      <h1 class="display-4 text-danger">Job Detail</h1>
+  <h1 class="display-4" style="color:maroon; font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;" >Job details</h1>
       <table class="table">
         <tbody>
           <tr>
@@ -18,8 +21,8 @@
             <td>{{job.company}}</td>
           </tr>
           <tr>
-            <th scope="row">Company URL</th>
-            <td>{{job.company_url}}</td>
+            <th scope="row">Apply here</th>
+            <td> <a href="{{job.company_url}}">{{job.company_url}}</a> </td>
           </tr>
           <tr>
             <th scope="row">Description</th>
@@ -27,7 +30,7 @@
           </tr>
           <tr>
             <th scope="row">Location</th>
-            <td>{{job.location}}</td>
+            <td><a href="https://www.google.com/maps/place/{{job.location}}">{{job.location}}</a></td>
           </tr>
         </tbody>
       </table>
